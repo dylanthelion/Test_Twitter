@@ -1,0 +1,11 @@
+{
+  "name": "Test_Twitter",
+  "version": "1.0.0",
+  "description": "Tests Twitter login",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "dylanthelion",
+  "license": "ISC"
+}

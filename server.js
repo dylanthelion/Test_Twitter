@@ -28,6 +28,7 @@ var twitter = new Twitter({
 var _requestSecret;
 
 app.get("/tokenRequest", function(req, res) {
+	console.log('Token request');
     twitter.getRequestToken(function(err, requestToken, requestSecret) {
     	if (err) {
     		console.log('Token request error');
@@ -41,6 +42,7 @@ app.get("/tokenRequest", function(req, res) {
 });
 
 app.get("/accessToken", function(req, res) {
+	console.log('Access token');
     var requestToken = req.query.oauth_token,
     verifier = req.query.oauth_verifier;
 

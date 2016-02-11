@@ -12,7 +12,7 @@ app.run(['$rootScope', '$window', function($rootScope, $window) {
 	
 	$('#getUserInfo').on('click', function(event) {
 		$.get('/accessToken' + location.search).done(function(user) {
-                    
+                    console.log('User: ' + JSON.stringify(user));
             });
 	});
 

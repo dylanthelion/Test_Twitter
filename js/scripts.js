@@ -11,15 +11,16 @@ app.run(['$rootScope', '$window', function($rootScope, $window) {
 	$rootScope.token = '';
 	
 	$('#getUserInfo').on('click', function(event) {
+		$.get('/accessToken' + location.search).done(function(user) {
+                    
+            });
 	});
 
 	$('#logout').on('click', function(event) {
 	});
 
 	$('#login').on('click', function() {
-		$.post('https://api.twitter.com/oauth/request_token?oauth_callback=http://localhost:1515', function(data) {
-			console.log('Response: ' + JSON.stringify(data));
-		});
+		window.location.href = 'http://localhost:1515/tokenRequest';
 	});
 
 

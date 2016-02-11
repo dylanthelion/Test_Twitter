@@ -20,7 +20,7 @@ app.run(['$rootScope', '$window', function($rootScope, $window) {
 	});
 
 	$('#login').on('click', function() {
-		window.location.href = 'http://localhost:1515/tokenRequest';
+		window.location.href = 'http://thelionstestingjungle.com/tokenRequest';
 	});
 
 

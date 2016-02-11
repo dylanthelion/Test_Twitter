@@ -1,4 +1,4 @@
-// uses bower install ng-facebook
+// uses https://api.twitter.com/oauth/authorize?oauth_token=<token>
 
 var app = angular.module('TwitterApp', []);
 

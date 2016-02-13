@@ -51,7 +51,10 @@ app.get("/accessToken", function(req, res) {
             	console.log('Get info error');
             	res.status(500).send(err);
             } else {
-                twitter.verifyCredentials(accessToken, accessSecret, function(err, user) {
+                var params = {
+                    'include_email' : true
+                };
+                twitter.verifyCredentials(accessToken, accessSecret, params, function(err, user) {
                     if (err) {
                     	console.log('Verification in get info error');
                         res.status(500).send(err);
